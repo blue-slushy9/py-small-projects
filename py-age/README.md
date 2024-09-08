@@ -1,0 +1,1 @@
+This Python script takes name and birth year as input and outputs a greeting that includes the person's name and their approximate age (based only on their birth year, not their specific date of birth).

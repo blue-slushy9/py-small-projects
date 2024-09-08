@@ -1,0 +1,1 @@
+This code creates a single string consisting of movie names, separated only by commas. Then it uses the .split() function to create a new list of individual movie names as strings. Then it prints each movie name separately.

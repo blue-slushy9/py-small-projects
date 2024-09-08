@@ -1,0 +1,47 @@
+# 8/5/24
+
+-Worked through the two issues last time, and got through 2/3 of the steps in
+building that Docker image. However, there is a strange issue on step 3.
+I tried using the official bash 3.2 Dockerfile to see if the issue was caused
+by my modifications, but I got even more errors from that one. It seems there
+may be compatibility issues between the newer versions of Docker and that 
+Dockerfile, which is quite old at this point. It may be wiser to simply re-
+write the bash script to use the latest version of bash; there should not be
+too many modifications needed.
+
+# 8/2/24
+
+-Installed buildx with pacman and ran 'docker buildx build' for the first time
+on the bash3.2 dockerfile, got this error:
+
+WARNING: No output specified with docker-container driver. Build result will 
+only remain in the build cache. To push result image into registry use --push 
+or to load image into docker use --load
+ERROR: failed to solve: failed to read dockerfile: open Dockerfile: no such 
+file or directory
+
+-However, the container does show up under 'docker ps'.
+
+-Upon asking ChatGPT, I learned that the command I ran expects a dockerfile
+named, simply, 'Dockerfile'; mine had a different name. This is the command:
+
+docker buildx build --tag bash3.2:v1 .
+
+-I can either rename my dockerfile to 'Dockerfile' or I can use a slightly
+different command that specifies the existing filename.
+
+-The other issue was that I needed to use the '--load' option to specify that
+I wanted to load the resultant Docker image into the local Docker instance.
+
+
+# First attempt at building image
+
+>docker build -t bash-git-gh:v0 bash_git.dockerfile 
+
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+unable to prepare context: context must be a directory: /home/slushy/GitHub/Python/py-small-projects/docker/bash_git.dockerfile
+
+-Guess I need to install BuildX...

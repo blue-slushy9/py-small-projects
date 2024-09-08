@@ -1,0 +1,1 @@
+This program takes a number as input and outputs whether it matches any of the pre-selected numbers (from 0 to 100) that were chosen as the correct answers to the guessing game. The program allows for only one guess for every time it is run.

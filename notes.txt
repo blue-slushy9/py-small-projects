@@ -1,0 +1,52 @@
+# GitHub profile URL
+https://github.com/blue-slushy9/
+
+
+
+# GIT COMMANDS CHEAT SHEET
+
+# Create a copy of the project in the current repo
+#git clone <repository-url>
+
+# Set the new remote origin URL
+#git remote set-url origin <new-repository-url>
+
+# Merge consolidate-repos branch into main branch
+#git checkout main
+#git merge consolidate-repos
+
+# Once you have merged the consolidate-repos branch into main, you can push
+# your changes
+#git push origin main
+
+# Remove a remote from repo, e.g. origin
+git remote remove origin
+
+
+# Add remote repository to current repo
+#git remote add <remote-name> <remote-url>
+# Example: git remote add origin https://github.com/username/repo.git
+# origin is the <remote-name>
+
+# Verify whether remote repo was added
+#git remote -v
+
+# Remove linked repo by name
+#git remote remove <repo-name>
+# Example: git remote remove origin 
+
+# Pull changes from remote repo and merge them into current branch
+#git pull <remote-name> <branch-name> --allow-unrelated-histories
+
+# Abort a merge
+#git merge --abort
+
+# Verify remote repos have been merged into current repo
+#git log --graph --oneline --decorate
+
+
+# GITHUB CLI COMMANDS CHEAT SHEET
+
+# Delete GitHub repository
+# -y switch is used to bypass the confirmation prompt
+#gh repo delete <username>/<reponame> -y

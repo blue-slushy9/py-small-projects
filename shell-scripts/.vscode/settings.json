@@ -1,0 +1,6 @@
+{
+    // Set the default terminal for this project to bash
+    "terminal.integrated.defaultProfile.linux": "bash",
+    // For the explainshell Docker container
+    "bashIde.explainshellEndpoint": "http://localhost:5000"
+}
